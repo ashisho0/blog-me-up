@@ -1,0 +1,84 @@
+<!-- loader -->
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-atom">
+    <div class="loader">
+        <p>LOADING....</p>
+    </div>
+</ngx-spinner>
+
+<!-- loader -->
+
+
+<section id="extended">
+    <div class="row text-left">
+        <div class="col-sm-12">
+            <div class="card mt-5">
+
+                <!-- <fieldset disabled>
+                <a href="javascript:void(0)" class="btn btn-raised mr-1 btn-primary">Add New</a>
+            </fieldset> -->
+                <div class="form-actions" style="margin-left: 30px; padding-top: 20px; margin-bottom: -30px;">
+
+                </div>
+
+                <div class="card-content" id="print-section">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Articles List</h4>
+                    </div>
+
+
+                    <div class="card-body">
+                        <table class="table table-responsive-md text-center">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Author</th>
+                                    <th>isPublished</th>
+                                    <th>Approved Date</th>
+                                    <th>Image</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+
+                                <tr *ngFor="let article of articleList;let i =index">
+
+                                    <td>{{i+1}}</td>
+                                    <td>{{article.title}}</td>
+                                    <td>
+                                        <p>{{article.description}}</p>
+                                    </td>
+                                    <td>{{article.author}}</td>
+                                    <td>{{article.isPublished}}</td>
+                                    <td>{{article.approvedDate}}</td>
+                                    <td><img src="{{imgUrl}}{{article.image}}" alt="Image" width="200px"></td>
+
+
+
+                                    <td>
+                                        <div class="floating-btn">
+
+                                            <a routerLink="edit/{{article._id}}"
+                                                class="btn btn-warning mr-1 mb-1 btn-fab"><i
+                                                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                            <a (click)="remove(article._id)" class="btn btn-danger mr-1 btn-fab"><i
+                                                    class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

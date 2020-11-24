@@ -1,0 +1,113 @@
+.brand {
+    text-align: center;
+    background-color: white;
+    padding-top: 10px;
+    letter-spacing: 5px;
+    position: relative;
+    animation: text 3s 1;
+    // animation-iteration-count:  ;
+}
+
+
+.navbar-brand {
+    font-family: "Pacifico";
+    font-size: 30px;
+    color: lightcoral;
+}
+
+@keyframes text {
+    0% {
+        color: white;
+    }
+
+    30% {
+        letter-spacing: 20px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+    }
+}
+
+.navbar {
+    background-color: #f4f0ec;
+}
+
+.nav-link {
+    font-size: 12px;
+    color: black !important;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.nav-link:hover {
+    color: #00e8e8 !important;
+}
+
+.active .nav-link {
+    color: #00e8e8 !important;
+}
+
+.dropdown-menu {
+    background-color: #f4f0ec;
+    border: none;
+}
+
+.dropdown-item {
+    font-size: 12px;
+    color: black !important;
+    font-family: "Montserrat Alternates", sans-serif;
+    text-transform: uppercase;
+}
+
+.dropdown-item:hover {
+    color: #00e8e8 !important;
+    background-color: #f4f0ec;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+form input {
+    font-family: "Montserrat Alternates", sans-serif;
+
+    height: 30px;
+}
+
+// 
+
+// search bar css
+
+input[type="text"] {
+    // background-color: #808080;
+    padding: 1rem 2rem;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 200px;
+    font-size: 1rem;
+}
+form {
+    display: flex;
+}
+
+.searchBtn {
+    width: 40px;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: #00e8e8;
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+}
+
+.searchBtn:hover {
+    background: #3498db;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+input:focus {
+    outline: none;
+}

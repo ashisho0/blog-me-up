@@ -1,0 +1,110 @@
+<!-- loader -->
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-atom">
+    <div class="loader">
+        <p>LOADING....</p>
+    </div>
+</ngx-spinner>
+
+<!-- loader -->
+
+
+<!-- Basic form layout section start -->
+<section id="horizontal-form-layouts">
+
+    <div class="row text-left">
+        <div class="col-md-12">
+            <div class="card mt-5 mb-5 p-3">
+
+                <div class="card-content">
+                    <div class="px-3">
+
+                        <form class="form form-horizontal" #updateUserForm="ngForm" novalidate>
+
+
+                            <div class="form-body">
+                                <h4 class="form-section p-4"><i class="ft-user"></i> USER DETAILS</h4>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control" required>Name </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Name" name="name"
+                                            [(ngModel)]="updatedUser.name" #name="ngModel" required>
+                                        <div *ngIf='name.invalid && name.dirty' class="danger">
+                                            Required Field**
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control" required>Username </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Username" name="username"
+                                            [(ngModel)]="updatedUser.username" #username="ngModel" required>
+                                        <div *ngIf='username.invalid && username.dirty' class="danger">
+                                            Required Field**
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control" required>Email address</label>
+                                    <div class="col-md-9">
+                                        <input type="email" id="projectinput3" class="form-control" placeholder="E-mail"
+                                            name="email" [(ngModel)]="updatedUser.email" #email="ngModel" email required
+                                            autofocus pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+                                        <div *ngIf='email.invalid && email.dirty' class="danger">
+                                            Not a valid email**
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control" for="projectinput4" required>Contact Number
+                                    </label>
+                                    <div class="col-md-9">
+                                        <input type="number" maxlength="10" class="form-control"
+                                            placeholder="Contact number" name="phone" [(ngModel)]="updatedUser.phone"
+                                            #phone="ngModel" required>
+
+                                        <div *ngIf='phone.invalid && phone.dirty' class="danger">
+                                            Required Field**
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control"> Role </label>
+                                    <div class="col-md-9">
+
+                                        <select class="form-control" name="role" [(ngModel)]="updatedUser.role"
+                                            #role="ngModel" required>
+                                            <option value=1>Admin</option>
+                                            <option value=2>Author</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-actions center">
+                                <button type="button" [disabled]="updateUserForm.invalid"
+                                    class="btn btn-raised btn-info mr-1" (click)='update()'>
+                                    <i class="ft ft-enquiry-check"></i> Update User
+                                </button>
+                                <button type="button" class="btn btn-raised btn-danger" routerLink="/user">
+                                    <i class="ft ft-x"></i> Cancel
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic form layout section end -->

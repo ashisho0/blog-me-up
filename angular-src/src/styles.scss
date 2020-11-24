@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.bubble.css";
+@import "~quill/dist/quill.snow.css";
+
+body {
+    margin: 0%;
+    height: 100%;
+    overflow-x: hidden;
+    //     background-image:url('./assets/image/bg1.jpg') !important;
+    //     background-repeat: no-repeat;
+    //     background-size: 100% 100%;
+}
+
+.danger {
+    color: red;
+}
+
+
+
+.loader {
+    text-align: center;
+    background-color: transparent;
+    padding-top: 10px;
+    letter-spacing: 5px;
+    position: relative;
+    animation: text 3s 1;
+    animation-iteration-count: infinite ;
+}
+
+
+.loader-sub {
+    font-family: "Pacifico";
+    font-size: 30px;
+    color: lightcoral;
+}
+
+@keyframes text {
+    0% {
+        color: white;
+    }
+
+    30% {
+        letter-spacing: 20px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+    }
+}

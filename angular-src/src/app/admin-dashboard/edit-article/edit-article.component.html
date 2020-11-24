@@ -1,0 +1,93 @@
+<!-- loader -->
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-atom">
+    <div class="loader">
+        <p>LOADING....</p>
+    </div>
+</ngx-spinner>
+
+<!-- loader -->
+
+
+
+
+<!-- Basic form layout section start -->
+
+
+<section id="horizontal-form-layouts">
+
+    <div class="row text-left">
+        <div class="col-md-12">
+            <div class="card mt-5 mb-5 p-3">
+
+                <div class="card-content">
+                    <div class="px-3">
+
+                        <form class="form form-horizontal" #updateArticleForm="ngForm" novalidate>
+
+
+                            <div class="form-body">
+                                <h4 class="form-section p-4"><i class="ft-user"></i> ADD NEW BLOG!</h4>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control" required>Title </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Title" name="title"
+                                            [(ngModel)]="updatedArticle.title" #title="ngModel" required>
+                                        <div *ngIf='title.invalid && title.dirty' class="danger">
+                                            Required Field**
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control">Description </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Description"
+                                            name="description" [(ngModel)]="updatedArticle.description"
+                                            #description="ngModel" required>
+                                        <div *ngIf='description.invalid && description.dirty' class="danger">
+                                            Required Field**
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control">Image</label>
+                                    <div class="col-md-9">
+                                        <input type="file" class="form-control" (change)="fileChanged($event)"
+                                            name="image">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 label-control" required>Content </label>
+
+                                    <div class="col-md-9">
+                                        <quill-editor [(ngModel)]="updatedArticle.content" name="content" required>
+                                        </quill-editor>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-actions center">
+                                <button type="button" [disabled]="updateArticleForm.invalid"
+                                    class="btn btn-raised btn-info mr-1" (click)='update()'>
+                                    <i class="ft ft-enquiry-check"></i> Update Blog
+                                </button>
+                                <button type="button" class="btn btn-raised btn-danger" [routerLink]="['article']">
+                                    <i class="ft ft-x"></i> Cancel
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic form layout section end -->

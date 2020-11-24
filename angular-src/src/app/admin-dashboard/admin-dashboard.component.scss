@@ -1,0 +1,45 @@
+.form-control-primary {
+    margin: 5px;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 70px 0 0 10px;
+    border-right: 1px solid #d3d3d3;
+}
+
+.sidebar-left {
+    position: sticky;
+    top: 0;
+    height: calc(100vh-70px);
+}
+
+.sidebar-nav li .nav-link {
+    color: rgb(62, 58, 58);
+    font-weight: 500;
+}
+
+
+.sidebar-nav li .nav-link:hover {
+    color: black;
+    border-bottom: black 1px solid;
+}
+
+.logout:hover {
+    transform: scale(1.2);
+}
+
+.userimage {
+    border-radius: 50%;
+    height: 4rem;
+}
+
+.center {
+    text-align: center;
+}

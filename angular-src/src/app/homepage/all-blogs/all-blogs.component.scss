@@ -1,0 +1,72 @@
+// main {
+//     background-color: #f4f0ec;
+// }
+h3 {
+    text-align: center;
+    padding: 2rem;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.mainCard {
+    background-color: #faf8f7;
+    margin-bottom: 5rem;
+}
+
+.blog {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.blog:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5), 0 17px 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+// Button
+
+$blue: #3498db;
+
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.6em;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    // margin: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        outline: 0;
+        background-color: #2c3e50 !important;
+    }
+}
+
+.third {
+    border-color: $blue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+    }
+}
+
+.blogImg {
+    height: 100%;
+    width: 35%;
+}
+
+.center {
+    text-align: center;
+}

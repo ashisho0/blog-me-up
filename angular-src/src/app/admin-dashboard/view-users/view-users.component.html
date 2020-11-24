@@ -1,0 +1,82 @@
+<!-- loader -->
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-atom">
+    <div class="loader">
+        <p>LOADING....</p>
+    </div>
+</ngx-spinner>
+
+<!-- loader -->
+
+
+
+<section id="extended">
+    <div class="row text-left">
+        <div class="col-sm-12">
+            <div class="card mt-5">
+
+
+                <div class="form-actions" style="margin-left: 30px; padding-top: 20px; margin-bottom: -30px;">
+
+                </div>
+
+                <div class="card-content" id="print-section">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Users List</h4>
+                    </div>
+
+
+                    <div class="card-body">
+                        <table class="table table-responsive-md text-center">
+                            <thead>
+                                <tr>
+
+                                    <th>S.No</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>isApproved</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                                <tr *ngFor="let user of userList;let i =index">
+
+                                    <td>{{i+1}}</td>
+                                    <td>{{user.image}}</td>
+                                    <td>{{user.name}}</td>
+                                    <td>{{user.phone}}</td>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.role}}</td>
+                                    <td>{{user.isApproved}}</td>
+                                    <td>{{user.createdAt}}</td>
+
+                                    <td>
+                                        <div class="floating-btn">
+
+                                            <a routerLink="edit/{{user._id}}" class="btn btn-warning mr-1 btn-fab"><i
+                                                    class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                            <a (click)="remove(user._id)" class="btn btn-danger mr-1 btn-fab"><i
+                                                    class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+<!-- navbar starts here -->
+<div class="brand">
+    <p class="navbar-brand"> Blog:)<span style="color:#00e8e8;">MeUp !</span></p>
+    <!-- <span>BLOG ME UP</span> -->
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"></div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/']" routerLinkActive="active">HOME</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="active">BLOGS</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CATEGORIES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">ACTION 1</a>
+                        <a class="dropdown-item" href="#">ACTION 2</a>
+                        <a class="dropdown-item" href="#">ACTION 3</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0" id="search">
+                        <input type="text" placeholder="Search">
+                        <input class="searchBtn">
+                    </form>
+                </li>
+
+            </ul>
+
+
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a *ngIf="isLoggedIn()" class="nav-link" routerLink="../admin">DASHBOARD </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a *ngIf="isLoggedIn()" (click)="logout()" class="nav-link" routerLink="../admin">LOGOUT <i class="fa fa-user"
+                            aria-hidden="true"></i> </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="!isLoggedIn()" routerLink="../auth/login">LOGIN <i class="fa fa-user"
+                            aria-hidden="true"></i></a>
+                </li>
+            </ul>
+
+
+
+        </div>
+    </div>
+
+
+</nav>
+
+<!-- navbar ends here -->

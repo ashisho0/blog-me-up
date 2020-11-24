@@ -1,0 +1,60 @@
+<!-- navbar -->
+
+<nav class="navbar navbar-dark bg-primary fixed-top flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-2 col-lg-2 col-md-2 mr-0" href="#">BlogMeUp</a>
+    <input type="text" class="form-control form-control-primary" placeholder="Search..." />
+    <button class="btn btn-success">Search</button>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link logout" (click)="logout()">Logout</a>
+
+        </li>
+    </ul>
+</nav>
+
+
+<!-- sidebar -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 bg-light d-none d-md-block sidebar">
+            <ul class="nav flex-column sidebar-nav">
+
+                <li class="nav-item center mb-4">
+                    <a class="nav-link" routerLink="profile/{{loggedInUser._id}}"> <img src="../../assets/image/user.png" class="userimage" alt="User avatar">
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['user']">View Users <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['user/add']">Add User <i class="fa fa-user"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['article']">View Article <i class="fa fa-newspaper-o"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['article/add']">Add Article <i class="fa fa-newspaper-o"
+                            aria-hidden="true"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- main-body -->
+
+<main class="col-md-10 col-lg-10 ml-sm-auto  px-4 pt-5">
+
+    <!-- <div>
+        <h3>Welcome to Admin Dashboard</h3>
+    </div> -->
+
+    <router-outlet></router-outlet>
+</main>
