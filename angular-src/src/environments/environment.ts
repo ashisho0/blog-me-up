@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  BaseUrl: "",
-  ImgUrl: ""
+  BaseUrl: "https://dry-crag-71428.herokuapp.com/api/",
+  ImgUrl: "https://dry-crag-71428.herokuapp.com/image/"
 
 };
 

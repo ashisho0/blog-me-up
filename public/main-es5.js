@@ -1315,8 +1315,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: false,
-      BaseUrl: "",
-      ImgUrl: ""
+      BaseUrl: "https://dry-crag-71428.herokuapp.com/api/",
+      ImgUrl: "https://dry-crag-71428.herokuapp.com/image/"
     };
     /*
      * For easier debugging in development mode, you can import the following file

@@ -649,8 +649,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const environment = {
     production: false,
-    BaseUrl: "",
-    ImgUrl: ""
+    BaseUrl: "https://dry-crag-71428.herokuapp.com/api/",
+    ImgUrl: "https://dry-crag-71428.herokuapp.com/image/"
 };
 /*
  * For easier debugging in development mode, you can import the following file
