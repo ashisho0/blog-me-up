@@ -16,7 +16,7 @@ export class UserService extends BaseService {
 
     getUser() {
         // console.log(this.url);
-        return this.http.get(this.url, this.getOptionsWithToken());
+        return this.http.get(this.url, this.getOptions());
     }
     addUser(data) {
         console.log(data, this.url)
@@ -24,7 +24,7 @@ export class UserService extends BaseService {
     }
 
     getUserById(id) {
-        return this.http.get(this.url + id, this.getOptionsWithToken());
+        return this.http.get(this.url + id, this.getOptions());
 
     }
     editUser(updatedData: User, id) {

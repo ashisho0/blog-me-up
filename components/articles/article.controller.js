@@ -85,9 +85,7 @@ function findById(req, res, next) {
 
     articleQuery.fetchOne({ _id: req.params.id })
         .then(function (data) {
-            if (req.loggedInUser.role === 1 || data.author === loggedInUser.id) {
                 res.json(data);
-            }
         })
         .catch(function (err) {
             next({
@@ -137,10 +135,10 @@ function update(req, res, next) {
 function remove(req, res, next) {
     articleQuery.remove(req.params.id)
         .then(function (data) {
-            if (req.loggedInUser.role === 1 || data.author === loggedInUser.id) {
+            // if (req.loggedInUser.role === 1 || data.author === loggedInUser.id) {
 
                 res.json(data);
-            }
+            // }
         })
         .catch(function (err) {
             next({

@@ -20,7 +20,7 @@ router.get("/", articleCtrl.find)
 
 router.post("/add", authenticate, upload.single("image"), articleCtrl.insert)
 
-router.get("/:id", authenticate, articleCtrl.findById)
+router.get("/:id", articleCtrl.findById)
 
 router.put("/edit/:id", authenticate, upload.single("image"), articleCtrl.update)
 

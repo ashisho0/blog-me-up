@@ -14,7 +14,6 @@ export class ArticleService extends BaseService {
     }
 
     getArticle() {
-        console.log('URL is---->', this.url)
         return this.http.get(this.url, this.getOptions());
     }
     addArticle(data) {
@@ -22,9 +21,8 @@ export class ArticleService extends BaseService {
     }
 
     getArticleById(id) {
-        console.log('URL is---->', this.url)
 
-        return this.http.get(this.url + id, this.getOptionsWithToken());
+        return this.http.get(this.url + id, this.getOptions());
 
     }
     editArticle(updatedData: Article, id) {

@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 
 const cors = require("cors");
 
-app.use
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Third party middlewares
@@ -29,6 +29,8 @@ app.use(cors());
 
 
 // Routes
+
+
 
 app.use("/api", apiRoute);
 

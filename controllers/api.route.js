@@ -15,7 +15,7 @@ module.exports = function () {
 
     router.use("/article", articleRoute);
 
-    router.use("/user", authenticate, authorizeAdmin, userRoute);
+    router.use("/user", userRoute);
 
     return router;
 }
